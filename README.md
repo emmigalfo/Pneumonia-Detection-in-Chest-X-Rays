@@ -53,10 +53,73 @@ Additionally, the area under the Receiver Operating Characteristic curve (ROC AU
 
 Overall, the baseline CNN model demonstrated promising results, particularly in identifying Pneumonia cases accurately. However, it showed some limitations in correctly classifying Normal cases. Fine-tuning the model or exploring different architectural adjustments may further enhance its performance on the test set and improve its sensitivity to Normal cases.
 
-#### Final Model
+***
+
+### Final Model
 ![Model Structure](photos/model_5_structure.png)
 ![Classification Report](photos/model_5_cr.png)
 ![Confusion Matrix](photos/model_5_cm.png)
 ![Loss graph](photos/model_5_loss.png)
 ![Accuracy graph](photos/model_5_accuracy.png)
 ![ROC AUC Score](photos/model_5_ROC.png)
+
+#### Model Evaluation:
+The final model, was built upon transfer learning with the Xception model's base layers, followed by custom dense layers for Pneumonia detection. The patience level was raised from 10 to 25 with the hope that the model would have more time to converge. 
+
+When evaluating Model 5 on the test set, it achieved an accuracy of 84.13% which is the highest accuracy of any of the models as well as a loss value of 0.69 which is similiar to model 4. The final model did run for more epochs than model 4, and the higher accuracy suggests that the higher patience level improved the model's performance.
+
+The confusion matrix for model 5 provided the following insights into its performance:
+
+True Positive (TP): The model correctly identified 383 Pneumonia cases as positive instances.
+True Negative (TN): The model correctly identified 142 Normal cases as negative instances.
+False Positive (FP): The model misclassified 92 Normal cases as Pneumonia, leading to false positives.
+False Negative (FN): The model missed seven Pneumonia cases, resulting in false negatives.
+
+
+Analyzing the recall, the model still demonstrates excellence in correctly identifying Pneumonia cases with a recall of 0.98. Moreover, it shows better performance for Normal cases with a recall of 0.61 compared to previous models. The overall recall went up to 0.84. 
+
+
+Furthermore, the ROC AUC score for the test set is 0.94. This high ROC AUC score, while similiar to all the other models', confirms the model's ability to effectively differentiate between the two classes and is an essential metric for evaluating the final model's performance.
+
+In conclusion, the final model with transfer learning from Xception shows significant improvement from the baseline model, accurately detecting both Pneumonia and Normal cases. The model's robustness is reflected in its high accuracy and good recall for both classes. These results are promising and showcase the potential of deep learning models in contributing to the advancement of medical image analysis for Pneumonia detection.
+
+***
+
+## Results and Conclusions
+Results:
+In this project, I applied Convolutional Neural Networks (CNNs) and transfer learning techniques to develop and evaluate several models for the task of Pneumonia detection from X-ray images. Five different models were implemented and compared, each with varying architectures and hyperparameters.
+
+Model Performance Summary:
+1. Model 1 achieved an accuracy of 79.33% on the test set, with an overall recall of 0.7933. It showed promising results in identifying Pneumonia cases accurately but had room for improvement in recognizing Normal cases.
+
+2. Model 2 demonstrated an accuracy of 73.00% on the test set, with an overall recall of 0.73. This model showed lower accuracy and overall recall than the baseline while maintaining a high recall for Pneumonia cases. 
+
+3. Model 3, demonstrated an accuracy of 82.00% on the test set, with an overall recall of 0.8205. This model showcased improved performance in correctly identifying Normal cases while maintaining a high recall for Pneumonia cases.
+
+4. Model 4, was based on Xception's base layers and fine tuned on Dense layers. Besides demonstrating a significantly lower loss score on the test set, it attained similiar results to Model 3 with an accuracy of 82.05% on the test set, with an overall recall of 0.82.
+
+5. Model 5, the final model, also based on Xception's base layers, was trained with a higher patience level than the other models allowing for a longer convergence time during training. It achieved an accuracy of 84.13% on the test set, with an overall recall of 0.84. It yielded the best results overall and a significant improvement from the baseline model. 
+
+Conclusions:
+The evaluation of the five models indicates that transfer learning with Xception's base layers with a longer patience level significantly enhances the performance of Pneumonia detection from X-ray images. Models utilizing transfer learning demonstrated superior accuracy and overall recall compared to the baseline model. The use of pre-trained models enables the models to leverage rich learned features from large-scale datasets, leading to improved generalization and robustness.
+
+Additionally, the experimentation with hyperparameters, such as patience level and dropout rates, provided valuable insights into model training and convergence. Adjusting these parameters allowed me to fine-tune the models, leading to more optimal performance.
+
+While the final model yielded the best results, Model 3 also showcased a close performance, demonstrating the effectiveness of the Convolutional Neural Networks for this specific task. The obtained ROC AUC score of 0.94 further indicates the model's ability to distinguish between Pneumonia and Normal cases.
+
+In conclusion, the AI-powered pneumonia detection model represents a significant step forward in assisting radiologists with accurate and efficient interpretation of chest X-rays. By harnessing cutting-edge technology, the medical technology company can provide radiologists with a valuable tool that enhances their diagnostic capabilities, leading to quicker and more precise pneumonia diagnoses. The developed model's success in detecting pneumonia showcases its potential to be seamlessly integrated into the company's medical imaging products, empowering healthcare professionals with advanced AI-driven solutions. As a result, the model holds great promise in revolutionizing medical diagnostics and contributing to improved patient outcomes. 
+However, there are limitations to be addressed to further optimize the model's performance. The class imbalance between Normal and Pneumonia cases remains a challenge, and future work should focus on methods such as weighted regularization and data augmentation to alleviate this issue. Additionally, further regularization techniques can be explored to prevent overfitting and enhance the model's generalization on diverse datasets. Continuous validation and performance assessment on larger and more diverse clinical data will be crucial to ensure the model's robustness and clinical applicability.
+
+***
+Thank You!
+emmi.galfo@gmail.com
+***
+
+## Repository structure: 
+├── Data : data used in project \
+├── Models : models trained on dataset \
+├── Photos : images used in readme, presentation, and notebook \
+├── Classifying-Pneumonia-in-X-rays.ipynb : jupyter notebook used to create project \
+├── README.md : project summary and conclusions \
+├── presentation.pdf : stakeholder powerpoint slides 
+
