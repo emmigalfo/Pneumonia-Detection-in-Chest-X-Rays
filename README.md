@@ -27,4 +27,36 @@ The dataset used in this project was downloaded from kaggle.com. It consists of 
 This disparity in class representation raises concerns about class imbalance. In machine learning and deep learning tasks, class imbalance can impact model performance and bias the predictions towards the majority class. In this dataset, the "Pneumonia" class is the majority class, while the "Normal" class is the minority class. This is something that I will keep in mind when evaluating my models. There are techniques I can implement such as creating synthetic data to add to the normal set to offset the imbalance; however, I am more concerned with classifying pneumonia correctly than miss-classifying healthy X-rays. I will keep in mind the imbalance when looking at the results and for now see how my models perform. 
 
 ## Modeling
+I will be using CNN (Convolutional Neural Networks) for this project because they are well-suited for image recognition tasks, allowing me to efficiently detect patterns and features in the chest X-ray images.
 
+### Baseline Model
+![Model Structure](photos/model_1_structure.png)
+![Classification Report](photos/model_1_cr.png)
+![Confusion Matrix](photos/model_1_cm.png)
+![Loss graph](photos/model_1_loss.png)
+![Accuracy graph](photos/model_1_accuracy.png)
+![ROC AUC Score](photos/model_1_ROC.png)
+
+#### Model Evaluation
+
+I used the test dataset to assess the model's generalization ability on unseen data. The model achieved an accuracy of 79.33% on the test set, and a loss of 0.95 demonstrating its overall correctness in predicting both classes.
+
+The confusion matrix provided insights into the model's performance by revealing the true positive, true negative, false positive, and false negative predictions for each class. 
+True Positive (TP): The model correctly identified 387 Pneumonia cases as positive instances.
+True Negative (TN): The model correctly identified 108 Normal cases as negative instances.
+False Positive (FP): The model misclassified 126 Normal cases as Pneumonia, leading to false positives.
+False Negative (FN): The model missed 3 Pneumonia case, resulting in false negatives.
+
+Moreover, the model achieved a recall (true positive rate) of 0.99 for Pneumonia cases in the test set, indicating its strong ability to correctly identify positive cases. However, the recall for Normal cases was only 0.46, suggesting room for improvement in correctly recognizing Normal cases. The overall recall was 0.79.
+
+Additionally, the area under the Receiver Operating Characteristic curve (ROC AUC score) for the test set was 0.93. The ROC curve illustrates the model's performance across various classification thresholds, and an AUC score closer to 1 indicates better discriminatory power. The achieved score of 0.93 indicates good model performance in distinguishing between Pneumonia and Normal cases. 
+
+Overall, the baseline CNN model demonstrated promising results, particularly in identifying Pneumonia cases accurately. However, it showed some limitations in correctly classifying Normal cases. Fine-tuning the model or exploring different architectural adjustments may further enhance its performance on the test set and improve its sensitivity to Normal cases.
+
+#### Final Model
+![Model Structure](photos/model_5_structure.png)
+![Classification Report](photos/model_5_cr.png)
+![Confusion Matrix](photos/model_5_cm.png)
+![Loss graph](photos/model_5_loss.png)
+![Accuracy graph](photos/model_5_accuracy.png)
+![ROC AUC Score](photos/model_5_ROC.png)
