@@ -1,6 +1,6 @@
 # Chest X-Ray Image Classification
 ***
-Machine learning project detecting Pneumonia in chest X-rays. 
+Convoluted Neural Network (CNN) project detecting Pneumonia in chest X-rays. 
 ![Doctor holding x-ray image](photos/Doctor-holding-image-of-chest-xray.jpg)
 **Author:** [Emmi Galfo](mailto:emmi.galfo@gmail.com)
 
