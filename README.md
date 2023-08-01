@@ -1,4 +1,4 @@
-# Chest-X-Ray-Image-Classification
+# Chest X-Ray Image Classification
 ***
 Machine learning project detecting Pneumonia in chest X-rays. 
 ![Doctor holding x-ray image](photos/Doctor-holding-image-of-chest-xray.jpg)
