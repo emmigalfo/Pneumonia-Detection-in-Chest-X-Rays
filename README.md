@@ -101,14 +101,17 @@ Model Performance Summary:
 5. Model 5, the final model, also based on Xception's base layers, was trained with a higher patience level than the other models allowing for a longer convergence time during training. It achieved an accuracy of 84.13% on the test set, with an overall recall of 0.84. It yielded the best results overall and a significant improvement from the baseline model. 
 
 Conclusions:
-The evaluation of the five models indicates that transfer learning with Xception's base layers with a longer patience level significantly enhances the performance of Pneumonia detection from X-ray images. Models utilizing transfer learning demonstrated superior accuracy and overall recall compared to the baseline model. The use of pre-trained models enables the models to leverage rich learned features from large-scale datasets, leading to improved generalization and robustness.
+* The transfer learning with Xception's base layers and a longer patience level significantly enhanced the performance of Pneumonia detection from X-ray images. The final model demonstrated superior accuracy and recall compared to the baseline model. The use of pre-trained model enabled the final model to leverage rich learned features from large-scale datasets, leading to improved generalization and robustness.
 
-Additionally, the experimentation with hyperparameters, such as patience level and dropout rates, provided valuable insights into model training and convergence. Adjusting these parameters allowed me to fine-tune the models, leading to more optimal performance.
+* The experimentation with hyperparameters, such as patience level and dropout rates, provided valuable insights into model training and convergence. Adjusting these parameters allowed me to fine-tune the models, leading to more optimal performance.
 
-While the final model yielded the best results, Model 3 also showcased a close performance, demonstrating the effectiveness of the Convolutional Neural Networks for this specific task. The obtained ROC AUC score of 0.94 further indicates the model's ability to distinguish between Pneumonia and Normal cases.
+* The final AI-powered pneumonia detection model represents a significant step forward in assisting radiologists with accurate and efficient interpretation of chest X-rays. 
 
-In conclusion, the AI-powered pneumonia detection model represents a significant step forward in assisting radiologists with accurate and efficient interpretation of chest X-rays. By harnessing cutting-edge technology, the medical technology company can provide radiologists with a valuable tool that enhances their diagnostic capabilities, leading to quicker and more precise pneumonia diagnoses. The developed model's success in detecting pneumonia showcases its potential to be seamlessly integrated into the company's medical imaging products, empowering healthcare professionals with advanced AI-driven solutions. As a result, the model holds great promise in revolutionizing medical diagnostics and contributing to improved patient outcomes. 
-However, there are limitations to be addressed to further optimize the model's performance. The class imbalance between Normal and Pneumonia cases remains a challenge, and future work should focus on methods such as weighted regularization and data augmentation to alleviate this issue. Additionally, further regularization techniques can be explored to prevent overfitting and enhance the model's generalization on diverse datasets. Continuous validation and performance assessment on larger and more diverse clinical data will be crucial to ensure the model's robustness and clinical applicability.
+* The developed model's success in detecting pneumonia showcases its potential to empower healthcare professionals with advanced AI-driven solutions.
+
+* There are limitations to be addressed to further optimize the model's performance. The class imbalance between Normal and Pneumonia cases remains a challenge, and future work should focus on methods such as weighted regularization and data augmentation to alleviate this issue. 
+
+* Additionally, further regularization techniques can be explored to prevent overfitting and enhance the model's generalization on diverse datasets. 
 
 ***
 Thank You!
