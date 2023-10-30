@@ -1,7 +1,7 @@
 # Pneumonia Detection in Chest X-Rays
 
 Convolutional Neural Network (CNN) project detecting Pneumonia in chest X-rays. 
-![Doctor holding x-ray image](photos/Doctor-holding-image-of-chest-xray.jpg)
+![Doctor holding x-ray image](Images/Doctor-holding-image-of-chest-xray.jpg)
 **Author:** [Emmi Galfo](mailto:emmi.galfo@gmail.com)
 
 ## Project Summary
@@ -21,8 +21,8 @@ A medical technology company wants an AI-powered system that detects pneumonia i
 ## Data Understanding
 The dataset used in this project was downloaded from kaggle.com. It consists of chest X-ray images categorized into two classes, "Pneumonia" and "Normal." The data provides a diverse range of X-rays, allowing the model to learn patterns and features related to pneumonia detection. With 5,863 labeled images, the dataset is sufficiently large enough to train a robust model.
 
-![Labeled chest X-ray images](photos/Sample_labeled_images.png)
-![Labeled chest X-ray images](photos/Class-distribution-table.png)
+![Labeled chest X-ray images](Images/Sample_labeled_images.png)
+![Labeled chest X-ray images](Images/Class-distribution-table.png)
 
 This disparity in class representation raises concerns about class imbalance. In machine learning and deep learning tasks, class imbalance can impact model performance and bias the predictions towards the majority class. In this dataset, the "Pneumonia" class is the majority class, while the "Normal" class is the minority class. This is something that I will keep in mind when evaluating my models. There are techniques I can implement such as creating synthetic data to add to the normal set to offset the imbalance; however, I am more concerned with classifying pneumonia correctly than miss-classifying healthy X-rays. I will keep in mind the imbalance when looking at the results and for now see how my models perform. 
 
@@ -30,12 +30,12 @@ This disparity in class representation raises concerns about class imbalance. In
 I will be using CNN (Convolutional Neural Networks) for this project because they are well-suited for image recognition tasks, allowing me to efficiently detect patterns and features in the chest X-ray images.
 
 ### Baseline Model
-![Model Structure](photos/model_1_structure.png)
-![Classification Report](photos/model_1_cr.png)
-![Confusion Matrix](photos/model_1_cm.png)
-![Loss graph](photos/model_1_loss.png)
-![Accuracy graph](photos/model_1_accuracy.png)
-![ROC AUC Score](photos/model_1_ROC.png)
+![Model Structure](Images/model_1_structure.png)
+![Classification Report](Images/model_1_cr.png)
+![Confusion Matrix](Images/model_1_cm.png)
+![Loss graph](Images/model_1_loss.png)
+![Accuracy graph](Images/model_1_accuracy.png)
+![ROC AUC Score](Images/model_1_ROC.png)
 
 #### Model Evaluation
 
@@ -56,12 +56,12 @@ Overall, the baseline CNN model demonstrated promising results, particularly in 
 ***
 
 ### Final Model
-![Model Structure](photos/model_5_structure.png)
-![Classification Report](photos/model_5_cr.png)
-![Confusion Matrix](photos/model_5_cm.png)
-![Loss graph](photos/model_5_loss.png)
-![Accuracy graph](photos/model_5_accuracy.png)
-![ROC AUC Score](photos/model_5_ROC.png)
+![Model Structure](Images/model_5_structure.png)
+![Classification Report](Images/model_5_cr.png)
+![Confusion Matrix](Images/model_5_cm.png)
+![Loss graph](Images/model_5_loss.png)
+![Accuracy graph](Images/model_5_accuracy.png)
+![ROC AUC Score](Images/model_5_ROC.png)
 
 #### Model Evaluation:
 The final model, was built upon transfer learning with the Xception model's base layers, followed by custom dense layers for Pneumonia detection. The patience level was raised from 10 to 25 with the hope that the model would have more time to converge. 
@@ -119,10 +119,8 @@ emmi.galfo@gmail.com
 ***
 
 ## Repository structure: 
-├── Data : data used in project \
-├── Models : models trained on dataset \
-├── Photos : images used in readme, presentation, and notebook \
-├── Classifying-Pneumonia-in-X-rays.ipynb : jupyter notebook used to create project \
+├── Images : images used in readme, presentation, and notebook \
+├── EDA-Modeling-Evaluation.ipynb : jupyter notebook used to create project \
 ├── README.md : project summary and conclusions \
-├── presentation.pdf : stakeholder powerpoint slides 
+├── Pneumonia_Detection_Presentation.pdf : stakeholder powerpoint slides 
 
