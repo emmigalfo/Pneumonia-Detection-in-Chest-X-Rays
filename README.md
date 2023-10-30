@@ -1,4 +1,4 @@
-# Chest X-Ray Image Classification
+# Pneumonia Detection in Chest X-Rays
 
 Convolutional Neural Network (CNN) project detecting Pneumonia in chest X-rays. 
 ![Doctor holding x-ray image](photos/Doctor-holding-image-of-chest-xray.jpg)
