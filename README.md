@@ -47,7 +47,7 @@ True Negative (TN): The model correctly identified 108 Normal cases as negative 
 False Positive (FP): The model misclassified 126 Normal cases as Pneumonia, leading to false positives.
 False Negative (FN): The model missed 3 Pneumonia case, resulting in false negatives.
 
-Moreover, the model achieved a recall (true positive rate) of 0.99 for Pneumonia cases in the test set, indicating its strong ability to correctly identify positive cases. However, the recall for Normal cases was only 0.46, suggesting room for improvement in correctly recognizing Normal cases. The overall recall was 0.79.
+Moreover, the model achieved a recall (true positive rate) of 0.99 for Pneumonia cases in the test set, indicating its strong ability to correctly identify positive cases. However, the recall for Normal cases was only 0.46, suggesting room for improvement in correctly recognizing Normal cases. The overall accuracy was 79%.
 
 Additionally, the area under the Receiver Operating Characteristic curve (ROC AUC score) for the test set was 0.93. The ROC curve illustrates the model's performance across various classification thresholds, and an AUC score closer to 1 indicates better discriminatory power. The achieved score of 0.93 indicates good model performance in distinguishing between Pneumonia and Normal cases. 
 
@@ -76,7 +76,7 @@ False Positive (FP): The model misclassified 92 Normal cases as Pneumonia, leadi
 False Negative (FN): The model missed seven Pneumonia cases, resulting in false negatives.
 
 
-Analyzing the recall, the model still demonstrates excellence in correctly identifying Pneumonia cases with a recall of 0.98. Moreover, it shows better performance for Normal cases with a recall of 0.61 compared to previous models. The overall recall went up to 0.84. 
+Analyzing the recall, the model still demonstrates excellence in correctly identifying Pneumonia cases with a recall of 0.98. Moreover, it shows better performance for Normal cases with a recall of 0.61 compared to previous models. The accuracy went up to 0.84. 
 
 
 Furthermore, the ROC AUC score for the test set is 0.94. This high ROC AUC score, while similiar to all the other models', confirms the model's ability to effectively differentiate between the two classes and is an essential metric for evaluating the final model's performance.
